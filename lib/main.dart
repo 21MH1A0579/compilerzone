@@ -1,4 +1,5 @@
-import 'package:compilerzone/provider.dart';
+
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:flutter_highlight/themes/monokai-sublime.dart';
@@ -37,6 +38,7 @@ class _HomePageState extends State<HomePage> {
     text: 'print("Hello, World!")',
     language: python,
   );
+
 
   @override
   Widget build(BuildContext context) {
@@ -118,11 +120,11 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 50,),
                 TextButton(
 
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(Colors.green.shade700)
-                  ),
+                    style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(Colors.green.shade700)
+                    ),
                     onPressed: (){
-                      RunCodeCompile(controller.fullText,selectedLanguage);
+
                     }, child: Text("COMPILE",style: TextStyle(color: Colors.white,fontSize: 22),))
               ],
             ),
