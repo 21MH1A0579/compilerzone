@@ -1,4 +1,5 @@
 
+import 'package:compilerzone/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -127,8 +128,8 @@ class _HomePageState extends State<HomePage> {
                         backgroundColor: WidgetStateProperty.all(Colors.green.shade700)
                     ),
                     onPressed: (){
-                      print(dotenv.get("API_KEY"));
 
+                      CodeCompile(controller.fullText, selectedLanguage);
                     }, child: Text("COMPILE",style: TextStyle(color: Colors.white,fontSize: 22),))
               ],
             ),
