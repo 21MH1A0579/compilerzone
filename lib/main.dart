@@ -1,4 +1,5 @@
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
@@ -7,7 +8,9 @@ import 'package:highlight/languages/java.dart';
 import 'package:highlight/languages/python.dart';
 import 'package:highlight/languages/cpp.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: 'apikey.env');
   runApp(const MyApp());
 }
 
@@ -124,6 +127,7 @@ class _HomePageState extends State<HomePage> {
                         backgroundColor: WidgetStateProperty.all(Colors.green.shade700)
                     ),
                     onPressed: (){
+                      print(dotenv.get("API_KEY"));
 
                     }, child: Text("COMPILE",style: TextStyle(color: Colors.white,fontSize: 22),))
               ],
