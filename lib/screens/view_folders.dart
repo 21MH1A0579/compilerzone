@@ -129,7 +129,8 @@ class _ViewFoldersScreenState extends State<ViewFoldersScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return folders.length==0?Center(child: Text("  NO Folders!!\nCreate a new one",style: TextStyle(fontSize: 22,color: Colors.red,fontWeight: FontWeight.bold),),): ListView.builder(
+    return folders.length==0?Center(child: Text("  NO Folders!!\nCreate a new one",style: TextStyle(fontSize: 22,color: Colors.red,fontWeight: FontWeight.bold),),)
+        : ListView.builder(
       itemCount: folders.length,
       itemBuilder: (context, index) {
         String foldername = folders[index].keys.first;
