@@ -34,7 +34,14 @@ CodeCompile(String code,String language) async{
         headers: urlheaders,
       body: urlbody,
     );
-    print(response.body+response.statusCode.toString());
+   if(response.statusCode==201)
+     {
+        final json=jsonDecode(response.body);
+
+     }
+   else{
+     print("Error Occured");
+   }
   }
   catch(e){
     print(e);
