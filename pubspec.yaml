@@ -38,6 +38,7 @@ dependencies:
   flutter_code_editor: ^0.3.2
   http:
   flutter_dotenv: ^5.1.0
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:
