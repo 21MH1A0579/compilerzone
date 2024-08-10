@@ -39,7 +39,7 @@ Future<String> CompilationResult(String token) async {
           return 'Compilation Error:\n${_decodeBase64(jsonResponse['compile_output'])}';
         }
       } else {
-        return 'Error fetching status: ${response.body}';
+        return 'Error: \n fetching status: ${response.body}';
       }
 
       // Wait for a while before checking the status again
@@ -83,7 +83,7 @@ Future<String> CodeCompile(String code, String entered_data, String language) as
       final json = jsonDecode(response.body);
       return CompilationResult(json['token']);
     } else {
-      return 'Error: ${response.body}';
+      return 'Error: \n ${response.body}';
     }
   } catch (e) {
     return 'Exception: $e';
