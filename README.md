@@ -9,24 +9,44 @@ It offers built-in code compilation and execution, making it a handy tool for de
 - **Real-time Compilation:** Compile and view results directly within the app.
 
 ## Screenshots
+## Screenshots
 
-![Home Screen](assets/ss1.jpg)
+<img src="assets/ss1.jpg" alt="Home Screen" width="400"/>
 *Create and manage folders.*
 
-![View Folders](assets/ss2.jpg)
+<img src="assets/ss2.jpg" alt="View Folders" width="400"/>
 *Manage and view folder contents.*
 
-![ADD FOLDER](assets/ss3.jpg)
-*Add Folders or Files.*
 
-![Delete Folder](assets/ss4.jpg)
-*Delete Your Folders*
 
-![Compiler Screen ](assets/ss5.jpg)
-*View real-time compilation results.*
+[//]: # (![Home Screen]&#40;assets/ss1.jpg&#41;)
 
-![Compilation Result Screen](assets/ss6.jpg)
-*Result Screen*
+[//]: # (*Create and manage folders.*)
+
+[//]: # ()
+[//]: # (![View Folders]&#40;assets/ss2.jpg&#41;)
+
+[//]: # (*Manage and view folder contents.*)
+
+[//]: # ()
+[//]: # (![ADD FOLDER]&#40;assets/ss3.jpg&#41;)
+
+[//]: # (*Add Folders or Files.*)
+
+[//]: # ()
+[//]: # (![Delete Folder]&#40;assets/ss4.jpg&#41;)
+
+[//]: # (*Delete Your Folders*)
+
+[//]: # ()
+[//]: # (![Compiler Screen ]&#40;assets/ss5.jpg&#41;)
+
+[//]: # (*View real-time compilation results.*)
+
+[//]: # ()
+[//]: # (![Compilation Result Screen]&#40;assets/ss6.jpg&#41;)
+
+[//]: # (*Result Screen*)
 
 
 
