@@ -22,7 +22,12 @@ class _CreateFolderScreenState extends State<CreateFolderScreen> {
 
     await prefs.setString('playground', jsonEncode(folders));
 
-    print(folders);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.green,
+        content: Text('Folder created successfully'),
+      ),
+    );
   }
 
   @override

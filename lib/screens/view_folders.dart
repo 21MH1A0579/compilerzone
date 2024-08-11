@@ -136,67 +136,103 @@ class _ViewFoldersScreenState extends State<ViewFoldersScreen> {
         String foldername = folders[index].keys.first;
         List files = folders[index][foldername];
 
-        return ExpansionTile(
-          title: Text(foldername),
-          trailing: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              IconButton(
-                icon: Icon(Icons.add),
-                onPressed: () => addFile(foldername),
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ExpansionTile(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(5),
+                topRight: Radius.circular(5),
+                bottomLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25)
               ),
-              IconButton(
-                icon: Icon(Icons.delete),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Text('Delete Folder'),
-                        content: Text('Are you sure you want to delete this folder?'),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              deleteFolder(foldername);
-                              Navigator.pop(context);
-                            },
-                            child: Text('Yes'),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text('No'),
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                },
-              ),
-            ],
-          ),
-          children: files.map<Widget>((file) {
-            String filename = file.keys.first;
-            return ListTile(
-              title: Text(filename),
-              trailing: IconButton(
-                icon: Icon(Icons.delete),
-                onPressed: () => deleteFile(foldername, filename),
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FileDetailScreen(
-                      language: file[filename]["language"],
-                      code: file[filename]["code"],
-                    ),
+              side: BorderSide(
+                color: Colors.brown
+              )
+            ),
+            collapsedShape:RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+                side: BorderSide(
+                    color: Colors.brown
+                )
+            ) ,
+            leading: Icon(Icons.arrow_drop_down_circle_outlined,size: 35,color: Colors.green,),
+            title: Center(child: Text(foldername,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),)),
+            trailing: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.add),
+                  onPressed: () => addFile(foldername),
+                ),
+                IconButton(
+                  icon: Icon(Icons.delete),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text('Delete Folder'),
+                          content: Text('Are you sure you want to delete this folder?'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                deleteFolder(foldername);
+                                Navigator.pop(context);
+                              },
+                              child: Text('Yes'),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text('No'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
+            children: files.map<Widget>((file) {
+              String filename = file.keys.first;
+             String langauage=file[filename]['language'];
+              return Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: ListTile(
+                  shape: RoundedRectangleBorder(
+                    borderRadius:BorderRadius.circular(5),
+                    side: BorderSide(
+                      color: Colors.green
+                    )
                   ),
-                );
-              },
-            );
-          }).toList(),
+                  title: Padding(
+                    padding: const EdgeInsets.only(left: 25),
+                    child: Text(filename,style: TextStyle(fontSize: 22),),
+                  ),
+                leading: langauage=='cpp'?Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue,fontSize: 22),):
+                langauage=='java'?Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.pink,fontSize: 22),):Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.yellow,fontSize: 22),),
+                  trailing: IconButton(
+                    icon: Icon(Icons.delete),
+                    onPressed: () => deleteFile(foldername, filename),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FileDetailScreen(
+                          language: file[filename]["language"],
+                          code: file[filename]["code"],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              );
+            }).toList(),
+          ),
         );
       },
     );

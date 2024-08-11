@@ -1,5 +1,6 @@
 import 'package:compilerzone/screens/compiler.dart';
 import 'package:compilerzone/screens/create_folder.dart';
+import 'package:compilerzone/screens/splashscreen.dart';
 import 'package:compilerzone/screens/view_folders.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
