@@ -144,8 +144,8 @@ class _BaseCompilerPageState extends State<BaseCompilerPage> {
                     fontFamily: 'SourceCodePro',
                     fontSize: 18,
                   ),
-                  minLines: 12, // Set minimum lines to decrease the height
-                  maxLines: null, // Allow the CodeField to grow with content
+                  minLines: 12,
+                  maxLines: null,
                 ),
               ),
             ),
@@ -194,23 +194,23 @@ class _BaseCompilerPageState extends State<BaseCompilerPage> {
                   labelText: 'Enter a Value',
                   labelStyle: const TextStyle(color: Colors.white),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0), // Rounded corners
+                    borderRadius: BorderRadius.circular(12.0),
                     borderSide: const BorderSide(
-                      color: Colors.white, // White border when not focused
+                      color: Colors.white,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0), // Rounded corners
+                    borderRadius: BorderRadius.circular(12.0),
                     borderSide: const BorderSide(
-                      color: Colors.green, // Green border when focused
-                      width: 2.0, // Thickness of the border
+                      color: Colors.green,
+                      width: 2.0,
                     ),
                   ),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0), // Rounded corners
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                 ),
-                style: const TextStyle(color: Colors.white), // Text color
+                style: const TextStyle(color: Colors.white),
                 onChanged: (value) {
                   setState(() {
                     userinput = value;

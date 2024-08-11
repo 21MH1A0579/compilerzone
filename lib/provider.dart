@@ -5,7 +5,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 final urlheaders = {
   "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
-  "x-rapidapi-key": dotenv.get("API_KEY"), // Ensure .env file contains API_KEY
+  "x-rapidapi-key": dotenv.get("API_KEY"),
   "content-type": "application/json",
   "accept": "application/json",
 };
@@ -43,7 +43,6 @@ Future<String> CompilationResult(String token) async {
         return 'Error: \n fetching status: ${response.body}';
       }
 
-      // Wait for a while before checking the status again
       await Future.delayed(Duration(seconds: 1));
     }
   } catch (e) {

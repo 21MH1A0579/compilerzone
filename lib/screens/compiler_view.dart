@@ -214,7 +214,7 @@ class _CompilerViewState extends State<CompilerView> {
                     fontSize: 18,
                   ),
                   minLines: 12,
-                  maxLines: 15, // Allow the CodeField to grow with content
+                  maxLines: 15,
                 ),
               ),
             ),
@@ -262,9 +262,9 @@ class _CompilerViewState extends State<CompilerView> {
                   labelText: 'Enter a Value',
                   labelStyle: const TextStyle(color: Colors.white),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12.0), // Rounded corners
+                    borderRadius: BorderRadius.circular(12.0),
                     borderSide: const BorderSide(
-                      color: Colors.white, // White border when not focused
+                      color: Colors.white,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
@@ -329,7 +329,6 @@ class _CompilerViewState extends State<CompilerView> {
 setState(() {
 
 });
-    // Save the updated data back to SharedPreferences
     prefs.setString('playground', jsonEncode(data));
 
   }
