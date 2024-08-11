@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
         foregroundColor: Colors.white,
         centerTitle: true,
         title: const Text(
-          "COMPILER ZONE",
+          "DEVPLAY",
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,

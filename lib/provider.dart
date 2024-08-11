@@ -67,6 +67,7 @@ int GetLangId(String lang) {
 
 // Function to compile the code
 Future<String> CodeCompile(String code, String entered_data, String language) async {
+  print(code);
   final urlbody = jsonEncode({
     "source_code": code,
     "stdin": entered_data,

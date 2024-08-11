@@ -234,7 +234,7 @@ class _BaseCompilerPageState extends State<BaseCompilerPage> {
             isloading = false;
           });
 
-          _showResultModal(context, output);
+          showResultModal(context, output);
         },
         child: isloading
             ? const Center(
@@ -245,7 +245,7 @@ class _BaseCompilerPageState extends State<BaseCompilerPage> {
     );
   }
 
-  void _showResultModal(BuildContext context, String result) {
+  void showResultModal(BuildContext context, String result) {
     // Check the output type
     bool isResult = result.startsWith("Results:");
     bool isCompilationError = result.startsWith("Compilation Error:");

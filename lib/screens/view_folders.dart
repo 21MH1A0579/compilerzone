@@ -139,6 +139,7 @@ class _ViewFoldersScreenState extends State<ViewFoldersScreen> {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: ExpansionTile(
+            backgroundColor: Colors.grey.shade100,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(5),
@@ -213,7 +214,7 @@ class _ViewFoldersScreenState extends State<ViewFoldersScreen> {
                     child: Text(filename,style: TextStyle(fontSize: 22),),
                   ),
                 leading: langauage=='cpp'?Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue,fontSize: 22),):
-                langauage=='java'?Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.pink,fontSize: 22),):Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.yellow,fontSize: 22),),
+                langauage=='java'?Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.pink,fontSize: 22),):Text(langauage,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.orange,fontSize: 22),),
                   trailing: IconButton(
                     icon: Icon(Icons.delete),
                     onPressed: () => deleteFile(foldername, filename),
@@ -222,9 +223,10 @@ class _ViewFoldersScreenState extends State<ViewFoldersScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FileDetailScreen(
+                        builder: (context) => CompilerView(
+                        foldername:foldername,
                           language: file[filename]["language"],
-                          code: file[filename]["code"],
+                          code: file[filename]["code"], filename: filename,
                         ),
                       ),
                     );
