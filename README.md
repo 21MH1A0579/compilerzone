@@ -13,12 +13,20 @@ It offers built-in code compilation and execution, making it a handy tool for de
 ![Home Screen](assets/ss1.jpg)
 *Create and manage folders.*
 
-![view Folders](assets/ss2.jpg)
-![Code Editor](assets/ss5.jpg)
-*Write and edit code with syntax highlighting.*
+![View Folders](assets/ss2.jpg)
+*Manage and view folder contents.*
 
-![Compilation Result](assets/ss5.jpg)
+![ADD FOLDER](assets/ss3.jpg)
+*Add Folders or Files.*
+
+![Delete Folder](assets/ss4.jpg)
+*Delete Your Folders*
+
+![Compiler Screen ](assets/ss5.jpg)
 *View real-time compilation results.*
+
+![Compilation Result Screen](assets/ss6.jpg)
+*Result Screen*
 
 
 
