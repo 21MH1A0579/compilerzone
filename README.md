@@ -8,6 +8,19 @@ It offers built-in code compilation and execution, making it a handy tool for de
 - **Multi-language Support:** Write and compile code in C++, Java, and Python.
 - **Real-time Compilation:** Compile and view results directly within the app.
 
+## Screenshots
+
+![Home Screen](assets/ss1.jpg)
+*Create and manage folders.*
+
+![view Folders](assets/ss2.jpg)
+![Code Editor](assets/ss5.jpg)
+*Write and edit code with syntax highlighting.*
+
+![Compilation Result](assets/ss5.jpg)
+*View real-time compilation results.*
+
+
 
 ## Quick Start
 
