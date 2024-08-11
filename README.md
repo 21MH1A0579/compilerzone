@@ -1,4 +1,4 @@
-# DEVPLAY
+# DevPlaY
 DevPlay is an Flutter-based Mobile Application that  helps EndUsers to create folders and files to save the code.
 DevPlay Compiler Supports C++,java and Python.
 It offers built-in code compilation and execution, making it a handy tool for developers to test code snippets on the go.
@@ -25,6 +25,7 @@ Follow these steps to clone the repository, Please add your API key, and run the
      create a .env file and add your api key into variable named API_KEY
 4. **Run Your Project:**
     ```bash
+    flutter run
    
 ## Contact
     For support or inquiries, contact chalumuribrahmendra@gmail.com.
