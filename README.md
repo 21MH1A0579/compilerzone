@@ -11,22 +11,36 @@ It offers built-in code compilation and execution, making it a handy tool for de
 ## Screenshots
 
 *This is the SplashScreen.*
-<img src="assets/ss1.jpg" alt="SplashScreen Screen" width="400" height="600"/>
+
+
+
+<img src="assets/ss1.jpg" alt="SplashScreen Screen" width="200" height="400"/>
 
 *Manage and view folder contents.*
-<img src="assets/ss2.jpg" alt="View Folders" width="400" height="600"/>
+
+
+
+<img src="assets/ss2.jpg" alt="View Folders" width="200" height="400"/>
 
 *Create and manage folders.*
-<img src="assets/ss3.jpg" alt="Add Folder" width="400" height="600"/>
+
+
+
+<img src="assets/ss3.jpg" alt="Add Folder" width="200" height="400"/>
 
 *Delete Your Folders.*
-<img src="assets/ss4.jpg" alt="Delete Folder" width="400" height="600"/>
+
+
+<img src="assets/ss4.jpg" alt="Delete Folder" width="200" height="400"/>
 
 *Compiler to run code.*
-<img src="assets/ss5.jpg" alt="Compiler Screen" width="400" height="600"/>
+
+<img src="assets/ss5.jpg" alt="Compiler Screen" width="200" height="400"/>
 
 *View real-time compilation results.*
-<img src="assets/ss6.jpg" alt="Compilation Result Screen" width="400" height="600"/>
+
+
+<img src="assets/ss6.jpg" alt="Compilation Result Screen" width="200" height="400"/>
 
 
 
